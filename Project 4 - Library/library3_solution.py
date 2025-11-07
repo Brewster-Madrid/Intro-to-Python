@@ -1,8 +1,27 @@
 all_books = []
 
-def add_book(title):
-    book = title
+def add_book(title, author, year):
+    book = {
+        'title': title,
+        'author': author,
+        'year': year
+    }
     all_books.append(book)
+
+def remove_book(title):
+    global all_books
+    all_books = [book for book in all_books if book['title'].lower() != title.lower()]
+
+def update_book(old_title, new_title=None, new_author=None, new_year=None):
+    for book in all_books:
+        if book['title'].lower() == old_title.lower():
+            if new_title:
+                book['title'] = new_title
+            if new_author:
+                book['author'] = new_author
+            if new_year:
+                book['year'] = new_year
+            break
 
 def book_list():
     return all_books
@@ -14,7 +33,9 @@ def main():
 
         if choice == 'add':
             title = input("Enter the book title: ").strip()
-            add_book(title)
+            author = input("Enter the book author: ").strip()
+            year = input("Enter the publication year: ").strip()
+            add_book(title, author, year)
             print(f"Book '{title}' added to the library.\n")
         
         elif choice == 'list':
@@ -24,7 +45,8 @@ def main():
             else:
                 print("Books in the library:")
                 for index, book in enumerate(books, start=1):
-                    print(f"{index}. {book}")
+                    print(f"{index}. {book})")
+                    # print(f"{index}. Title: {book['title']} | Author: {book['author']} | Year: {book['year']}")
                 print()
 
         elif choice == 'exit':
