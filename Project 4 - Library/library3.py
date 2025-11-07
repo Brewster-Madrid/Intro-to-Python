@@ -49,13 +49,15 @@
 
 
 # TODO: Define a main() function
-# This is similar to Level 2, but you can extend the menu to include:
-# - 'remove': Ask for title, call remove_book()
-# - 'update': Ask for old title and new values, call update_book()
+# The main function should have a menu-driven interface similar to Level 2
+# At minimum, implement the 'add', 'list', and 'exit' options
 #
-# Note: For this level, you can keep the menu simple with just 'add', 'list', and 'exit'
-# The remove and update functions are defined and available, but don't need to be 
-# called from main() unless you want the extra challenge!
+# OPTIONAL CHALLENGE: Extend the menu to include:
+# - 'remove': Ask for title, call remove_book(), print confirmation
+# - 'update': Ask for old title and new values, call update_book(), print confirmation
+#
+# Note: The remove_book() and update_book() functions defined above are required
+# for this level, but calling them from the menu is optional extra practice!
 
 
 # TODO: Add the if __name__ == "__main__": block to run main()

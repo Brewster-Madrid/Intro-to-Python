@@ -68,19 +68,20 @@
 # This function should:
 # 1. Prompt the user to enter their name
 # 2. Clean the input with .strip()
-# 3. Check if the name is in the users list:
-#    - If the name is one of the students (all users except "Librarian"):
+# 3. Check if the name is in the users list and determine their role:
+#    - If the name is in the users list AND is NOT "Librarian" (i.e., is a student):
 #      * Print a welcome message
 #      * Return the name
-#    - If the name is "Librarian":
+#    - If the name is exactly "Librarian":
 #      * Print a special welcome message for librarian
 #      * Return "Librarian"
-#    - If the name is not in the users list:
+#    - If the name is not in the users list at all:
 #      * Print "Authentication failed"
 #      * Return None
 #
 # Hint: users[:-1] gives you all users except the last one (all students)
-# Hint: users[-1] or checking if name == "Librarian" identifies the librarian
+# Hint: Check if name == "Librarian" to identify the librarian
+# Hint: Check if name in users[:-1] to identify students
 
 
 # TODO: Define a main() function
