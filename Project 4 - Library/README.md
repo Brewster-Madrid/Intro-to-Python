@@ -36,9 +36,9 @@ Building on Exercise 1, you'll upgrade your library to store more information ab
 
 ### ✅ Exercise 3: Full CRUD Operations (`library3.py`)
 Expanding on Exercise 2, you'll add complete Create, Read, Update, Delete (CRUD) functionality:
-- **Remove books** from the library by title.
-- **Update existing books** with new information (title, author, or year).
-- Implement more sophisticated data manipulation techniques.
+- Removes books from the library by title.
+- Updates existing books with new information (title, author, or year).
+- Implements more sophisticated data manipulation techniques.
 - **Solution File:** `library3_solution.py` (Reference solution for comparison)
 
 ### ✅ Exercise 4: Advanced Library with User Authentication (`library4.py`)
