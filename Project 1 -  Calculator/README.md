@@ -68,3 +68,5 @@ To check your work, you will use the `pytest` library.
 
 3.  **Making Tests Pass:**
     To make your code testable, you must wrap any code that *runs* the program (like calling `input()`) inside an `if __name__ == "__main__":` block at the end of your file. This allows `pytest` to `import` your functions without running the whole program.
+    
+    You will also need to ensure your arithmetic operations are defined as separate functions (e.g., `add(x, y)`, `subtract(x, y)`, etc.) that return values, so the tests can call them.
