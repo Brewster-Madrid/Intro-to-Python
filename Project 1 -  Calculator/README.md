@@ -2,7 +2,7 @@
 
 Welcome to the **first set of activities** in this Python course!
 
-In this project, you’ll build a calculator by applying your knowledge of:
+In this project, you'll build a calculator by applying your knowledge of:
 - **Statements**
 - **Expressions**
 - **Operators**
@@ -12,16 +12,26 @@ These exercises are designed to give you a solid foundation in writing basic log
 
 ---
 
-## 📘 Exercises Overview
+## 📘 What You'll Do
 
-There are **three exercises** in increasing order of difficulty. 
+This module is broken into three hands-on exercises, each with its own test file to help you check your work.
 
-### ✅ Start Here: `calc_v1.py`
-You must complete `calc_v1.py` **before moving on** to the other versions. Each exercise includes in-code `#comments` with instructions to guide you.
+### ✅ Exercise 1: Basic Calculator (`calc_v1.py`)
+You must complete `calc_v1.py` **before moving on** to the other versions. You'll build a simple calculator that:
+- Implements basic arithmetic operations (add, subtract, multiply, divide, remainder, exponent).
+- Takes user input for numbers and operations.
+- Performs the selected calculation and displays the result.
+- **Test File:** `calcv1_test.py` (Tests your arithmetic functions and main program logic)
 
-### 🧠 Instructions
-- Follow the comments in each `.py` file to complete the activity.
-- After finishing each exercise, run the provided test file to check your solution.
+### ✅ Exercise 2: Enhanced Calculator (`calc_v2.py`)
+Building on Exercise 1, you'll enhance your calculator with additional features and improved error handling.
+- Follow the in-code `#comments` with instructions to complete the activity.
+- **Test File:** `calcv2_test.py` (Tests your enhanced functionality)
+
+### ✅ Exercise 3: Advanced Calculator (`calc_v3.py`)
+The most advanced version with comprehensive functionality.
+- Follow the in-code `#comments` with instructions to complete the activity.
+- **Test File:** `calcv3_test.py` (Tests your advanced features)
 
 ---
 
@@ -35,21 +45,28 @@ At the **bottom of your code**, you **must include a comment section** that expl
 
 ---
 
-## ✅ Testing Your Code
+## 🧪 Running Tests
 
-Testing is a key part of being a developer. The provided tests will:
-- Automatically run your functions with different inputs
-- Check if your output matches the expected result
-- Show how many tests passed or failed
-- Identify **which function** and **which input** caused a failure
+To check your work, you will use the `pytest` library.
 
-### 🧪 How to Run Tests in VS Code
+1.  **Install pytest:**
+    ```bash
+    pip install pytest
+    ```
 
-You must be using an IDE like **VS Code** to run test files.
+2.  **Run tests for a specific exercise:**
+    ```bash
+    # To run tests for calc_v1
+    pytest calcv1_test.py
+    
+    # To run tests for calc_v2
+    pytest calcv2_test.py
+    
+    # To run tests for calc_v3
+    pytest calcv3_test.py
+    ```
 
-**Two ways to run tests:**
-
-1. Click the **Run** ▶️ button in the top-right corner of VS Code  
-2. Use the **Command Line Interface (CLI)** inside VS Code:
-   ```bash
-   python -m unittest test_calc_v1.py
+3.  **Making Tests Pass:**
+    To make your code testable, you must wrap any code that *runs* the program (like calling `input()`) inside an `if __name__ == "__main__":` block at the end of your file. This allows `pytest` to `import` your functions without running the whole program.
+    
+    You will also need to ensure your arithmetic operations are defined as separate functions (e.g., `add(x, y)`, `subtract(x, y)`, etc.) that return values, so the tests can call them.
