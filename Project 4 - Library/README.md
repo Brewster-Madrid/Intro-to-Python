@@ -64,7 +64,7 @@ You are **required** to add comments at the **bottom of your code** explaining:
 
 ## 🧪 Testing Your Code
 
-Unlike Projects 1-3 which use automated pytest files, this module uses **solution files** for manual comparison instead of automated test files. 
+Unlike Projects 1-3 which use automated pytest files, this module uses **solution files** for manual comparison. 
 
 1. **Compare your output with the solution:**
    - Run your version: `python library1.py`
